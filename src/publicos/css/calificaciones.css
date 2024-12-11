@@ -1,0 +1,49 @@
+
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+.oculto {
+    display: none;
+}
+
+#contenedor-titulo{
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+
+
+#contenedor-secciones {
+    background-color: var(--color-secciones);
+
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.secciones {
+    background-color: var(--bg-input);
+
+    transition-duration: 500ms;
+    transition-property: background,color;
+
+    width: 90%;
+    border: solid 1px #000;
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 0;
+    margin: auto;
+    margin-bottom: 5px;
+}
+.secciones:hover {
+    color: var(--color-secciones);
+    background-color: var(--bg-modalidades);
+}
+
+
+

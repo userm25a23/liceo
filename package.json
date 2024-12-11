@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-liceo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mysql": "^2.18.1",
+    "node-localstorage": "^3.0.5",
+    "nodemon": "^3.1.7",
+    "store": "^2.0.12"
+  }
+}

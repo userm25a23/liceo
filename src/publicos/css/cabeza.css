@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    position: relative;
+    overflow-x: hidden;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #ededed;
+
+    font-family: sans-serif;
+    text-transform: capitalize;
+    
+    --bg-color-basico: #ededed;
+    --color-decorativo: #a22;
+    --bg-modalidades:  #a22e;
+    --color-apagado: #999;
+    --bg-fondo: #000a;
+    --color-secciones: #fff;
+    --color-input: #444;
+    --bg-input: #ccc;
+
+    --color-mensage-error: #000;
+
+    --bg-boton-editar: #aa2;
+    --bg-boton-vista: #37f;
+    --bg-boton-guardar:  #2a2;
+
+    --msg-celular: #eeea;
+
+}
+
+button {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 70px;
+    padding: 10px;
+
+    background-color: var(--bg-color-basico);
+}
+#logo {
+    display: flex;
+    align-items: center;
+}
+#logo img {
+    height: 70px;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-decorativo);
+}
+nav a {
+    margin-right: 20px;
+}
+
+
+
+.secciones {
+    margin: 0 0   10rem 0;
+}
+
+
+@media (max-width: 350px) {
+    #logo h1 {
+        display: none;
+    }
+}
+@media (max-width: 750px) {
+    header {
+        flex-direction: column;
+    }
+    #logo {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    #logo h1 {
+        font-size: large;
+    }
+}

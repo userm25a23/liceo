@@ -1,0 +1,25 @@
+
+<%- include('./partials/cabeza.ejs') %>
+
+<link rel="stylesheet" href="/css/calificaciones.css">
+
+
+<main>
+    <div id="contenedor-titulo">
+        <h2>secciones</h2>
+    </div>
+
+    <div id="contenedor-secciones">
+        <input class="oculto" id="numeroSeccion" type="number" value="<%= numeroSeccion.length %>">
+        <% for(let i=0;i<numeroSeccion.length;i++) { %>
+            <div id="calificaciones-seccion<%= i %>" class="calificaciones-secciones">
+                <h3 class="secciones"> seccion: (<%= numeroSeccion[i].seccion %>) </h3>
+                <input class="oculto" id="seccionValor<%= i %>" type="text" value="<%= numeroSeccion[i].seccion %>">
+            </div>
+
+        <% } %>
+
+    </div>
+</main>
+
+<script src="/js/calificacionesScript.js"></script>

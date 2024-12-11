@@ -1,0 +1,16 @@
+<%- include('./partials/cabeza.ejs') %>
+
+<link rel="stylesheet" href="/css/calificacionesPanel.css">
+
+<main id="main-calificaciones-panel">
+    <div id="contenedor-form-panel-calificaciones">
+        
+        <form id="form-panel-calificaciones" action="/calificaciones/verificar" method="post">
+            <h3>ingrese el codigo</h3>
+            <input class="oculto" type="text" name="seccion" value="<%= seccion %>">
+            <input type="number" placeholder="codigo" name="codigo">
+            <button>enviar</button>
+        </form>
+
+    </div>
+</main>

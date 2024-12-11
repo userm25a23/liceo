@@ -1,0 +1,88 @@
+
+
+.oculto {
+    display: none;
+}
+#contenedor-form-editar label,#boton-guardar  {
+    box-shadow: 5px 5px 12px #000;
+}
+
+
+
+
+#contenedor-titulo {
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+#contenedor__boton-guardar {
+    height: 50px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: end;
+}
+#boton-guardar {
+    width: 100px;
+    height: 100%;;
+    margin: 0 20px;
+
+    transition-duration: .500s;
+    transition-property: background,color,border;
+
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: solid 2px var(--bg-fondo);
+    background-color: var(--bg-boton-guardar);
+}
+#boton-guardar:hover {
+    background-color: #161;
+    color: var(--bg-color-basico);
+    border: solid 2px var(--bg-color-basico);
+}
+#boton-guardar:focus {
+    background-color: #161;
+    color: var(--bg-color-basico);
+    border: solid 2px var(--bg-color-basico);
+}
+
+
+
+
+
+
+#contenedor-form-editar form {
+    width: 100dvw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+
+    text-align: center;
+}
+#contenedor-form-editar label {
+    display: flex;
+    flex-direction: column;
+
+    margin: 1rem;
+    padding: 1rem;
+}
+#contenedor-form-editar label input {
+    margin: 0;
+    padding: 0;
+    margin-top: .5rem;
+    padding: 10px 10px 5px 10px;
+    
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--bg-fondo);
+}
+#contenedor-form-editar label input:hover {
+    border-bottom: 2px solid var(--bg-modalidades);
+
+}
+#contenedor-form-editar label input:focus {
+    border-bottom: 2px solid var(--bg-modalidades);
+}

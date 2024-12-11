@@ -1,0 +1,37 @@
+<%- include('./partials/cabeza.ejs') %>
+
+<link rel="stylesheet" href="/css/panelEditar.css">
+
+
+
+<main>
+    <div id="contenedor-titulo">
+        <h1> panel editar <%= seccion %></h1>
+    </div>
+    <div id="contenedor__boton-guardar">
+        <button form="form-editar" id="boton-guardar">guardar</button>
+    </div>
+
+    <div id="contenedor-form-editar">
+
+        
+            <form id="form-editar" action="/editar" method="post">
+                <input class="oculto" name="id_alumnos" type="number" value="<%= id_alumnos %>">
+                <label>
+                    nombre
+                    <input id="nombre" name="nombre" type="text" placeholder="nomrbe" value="<%= nombre %>">
+                </label>
+                
+                <label>
+                    edad
+                    <input id="edad" name="edad" type="number" placeholder="edad" value="<%= edad %>">
+                </label>
+                
+                <input class="oculto" name="seccion" type="text" value="<%= seccion %>">
+                <input class="oculto" name="codigo" type="number" value="<%= codigo %>">
+            </form>
+            
+
+
+    </div>
+</main>

@@ -1,0 +1,51 @@
+<%- include('./partials/cabeza.ejs') %>
+
+<link rel="stylesheet" href="/css/acceder.css">
+
+<main id="contenido-principal">
+        
+        <form action="/accederVerificar" method="post">
+            <h1>acceder</h1>
+            <select name="seccion" id="seccion">
+                <option value="1roA">1ro A</option>
+                <option value="1roB">1ro B</option>
+                <option value="1roC">1ro C</option>
+                <option value="1roD">1ro D</option>
+        
+                <option value="2doA">2do A</option>
+                <option value="2doB">2do B</option>
+                <option value="2doC">2do C</option>
+                <option value="2doD">2do D</option>
+        
+                <option value="3roA">3ro A</option>
+                <option value="3roB">3ro B</option>
+                <option value="3roC">3ro C</option>
+                <option value="3roD">3ro D</option>
+        
+                <option value="4toA">4to A</option>
+                <option value="4toB">4to B</option>
+                <option value="4toC">4to C</option>
+                <option value="4toD">4to D</option>
+        
+                <option value="5toA">5to A</option>
+                <option value="5toB">5to B</option>
+                <option value="5toC">5to C</option>
+                <option value="5toD">5to D</option>
+                
+                <option value="6toA">6to A</option>
+                <option value="6toB">6to B</option>
+                <option value="6toC">6to C</option>
+                <option value="6toD">6to D</option>
+            </select>
+            <input id="codigo" type="number" placeholder="codigo" name="codigo" autocomplete="off">
+            <button id="boton">enviar</button>
+        
+            <div id="mensage-servidor">
+                <h3><%= mensage %></h3>
+            </div>
+        </form>
+
+    </main>
+
+</body>
+</html>

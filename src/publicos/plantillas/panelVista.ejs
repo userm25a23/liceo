@@ -1,0 +1,58 @@
+<%- include('./partials/cabeza.ejs') %>
+
+<link rel="stylesheet" href="/css/panelVista.css">
+
+
+
+<main>
+    <div id="contenedor-titulo">
+        <h2> panel vista <%= seccion %></h2>
+        <h2><%= nota[0][0].nombre_completo %></h2>
+    </div>
+    <div id="contenedor__boton-guardar">
+        <button form="form-nota" id="boton-guardar">guardar</button>
+    </div>
+
+    <div id="contenedor-nota">
+        <form action="/panel/vista" id="form-nota" method="post">
+            
+            <input class="oculto" type="number" name="id" value="<%= id_alumnos %>">
+            <input class="oculto" type="text" name="seccion" value="<%= seccion %>">
+            <input class="oculto" type="number" name="codigo" value="<%= codigo %>">
+            <input class="oculto" type="number" name="cantidad" value="<%= nota.length %>">
+
+            
+            
+            <% for(let i=0;i<nota.length;i++) { %>
+                
+                <div class="notas nota-matematica">
+                    <h3><%= nota[i][0].materia %></h3>
+            
+                    <label>
+                        p1
+                        <input type="number" value="<%= nota[i][0].p1 %>" name="p1Notas<%= i %>">
+                    </label>
+                    <label>
+                        p2
+                        <input type="number" value="<%= nota[i][0].p2 %>" name="p2Notas<%= i %>">
+                    </label>
+                    <label>
+                        p3
+                        <input type="number" value="<%= nota[i][0].p3 %>" name="p3Notas<%= i %>">
+                    </label>
+                    <label>
+                        p4
+                        <input type="number" value="<%= nota[i][0].p4 %>" name="p4Notas<%= i %>">
+                    </label>
+                </div>
+            
+            
+                <% } %>
+            
+        </form>
+    </div>
+        
+    
+
+</main>
+

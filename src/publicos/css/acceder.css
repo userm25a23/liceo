@@ -1,0 +1,96 @@
+body {
+    background-color: var(--bg-color-basico);
+    background-image: url(/css/imagenes/accederFondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100dvw 100dvh;
+}
+
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+
+form {
+    width: 70%;
+    box-sizing: border-box;
+    margin: 5% auto;
+    padding: 20px;
+
+    backdrop-filter: blur(10px);
+    letter-spacing: 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+
+    border: solid 1px var(--bg-fondo);
+    border-radius: 5px;
+}
+form h1 {
+    color: var(--bg-color-basico);
+    margin: 0 0 2rem 0;
+}
+
+
+form select,input,button {
+    outline: none;
+    border: none;
+
+    background-color: var(--bg-input);
+
+    transition-property: background,color,outline;
+    transition-duration: 500ms;
+}
+form select:hover,input:hover{
+    outline: solid 1px var(--bg-modalidades);
+    background-color: var(--bg-color-basico);
+}
+form select:focus,input:focus{
+    outline: solid 1px var(--bg-modalidades);
+    background-color: var(--bg-color-basico);
+}
+button:hover {
+    background-color: var(--bg-modalidades);
+    color: var(--bg-color-basico);
+}
+form input,select {
+    width: 90%;
+    box-sizing: border-box;
+    padding: 10px 5px 5px 5px;
+    margin: .5em 0;
+}
+input::placeholder {
+    color: #000;
+}
+
+form button {
+    padding: 1rem 3rem;
+    margin: 1em 0 0 0;
+    
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+#mensage-servidor {
+    width: 100%;
+
+    margin: 10px;
+    text-align: center;
+    color: var(--bg-modalidades);
+    text-shadow: 0 0 7px var(--bg-modalidades);
+    font-size: small;
+}
+
+
+
+@media (max-width: 750px) {
+    form {
+        width: 90dvw;
+    }
+}

@@ -1,0 +1,103 @@
+
+
+
+
+
+.oculto {
+    display: none;
+}
+
+
+
+
+body {
+    overflow: hidden;
+}
+
+#main-calificaciones-panel{
+    box-sizing: border-box;
+    height: 100dvh;
+
+    background-image: url("/css/imagenes/calificacionPanel.jpg");
+    background-repeat: no-repeat;
+    background-size: 100dvw 100dvh;
+
+}
+
+
+
+#contenedor-form-panel-calificaciones {
+    height: 50dvh;
+
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contenedor-form-panel-calificaciones form {
+    width: 70%;
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1rem;
+    border: solid 2px #000;
+    border-radius: 5px;
+}
+#contenedor-form-panel-calificaciones h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#contenedor-form-panel-calificaciones input, #contenedor-form-panel-calificaciones button {
+    border: none;
+    outline: none;
+
+}
+#contenedor-form-panel-calificaciones input::placeholder {
+    color: var(--color-secciones);
+}
+#contenedor-form-panel-calificaciones input {
+    transition-property: border;
+    transition-duration: 500ms;
+
+    margin: 1rem;
+    padding: 10px 5px 5px 5px;
+    border-bottom: 2px solid #000;
+
+    background-color: transparent;
+    color: var(--color-secciones);
+}
+#contenedor-form-panel-calificaciones input:hover {
+    border-bottom: 2px solid var(--bg-modalidades);
+}
+#contenedor-form-panel-calificaciones input:focus {
+    border-bottom: 2px solid var(--bg-modalidades);
+}
+#contenedor-form-panel-calificaciones button {
+    padding: .5rem 3rem;
+    margin: auto;
+
+    
+    transition-property: background,color;
+    transition-duration: 500ms;
+}
+#contenedor-form-panel-calificaciones button:hover {
+    background-color: var(--bg-modalidades);
+    color: var(--color-secciones);
+}
+#contenedor-form-panel-calificaciones button:focus {
+    background-color: var(--bg-modalidades);
+    color: var(--color-secciones);
+}
+
+
+
+@media (max-width: 750px) {
+    #contenedor-form-panel-calificaciones form{
+        width: 85%;
+    }
+}

@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    pad: 0;
+}
+body {
+    background-color: var(--color-secciones);
+}
+
+.oculto {
+    display: none;
+}
+
+
+
+#contenedor-titulo {
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+#contenedor-agregar h2{
+    text-align: center;
+    margin-top: 1rem;
+}
+#contenedor-agregar form {
+    width: 100dvw;
+    margin: 1rem 0;
+    padding: 1rem 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 2px #000;
+    background-color: var(--bg-input);
+
+}
+#contenedor-agregar input,button{
+    transition-duration: .500s;
+    transition-property: background,color,border;
+
+    padding: 10px 5px 5px 5px;
+    margin: 5px;
+
+    background-color: var(--bg-color-basico);
+
+    border: none;
+    outline: none;
+    border-bottom: solid 2px var(--bg-fondo);
+    border-radius: 5px;
+}
+#contenedor-agregar input:hover {
+    background-color: var(--color-secciones);
+    border-bottom: solid 2px var(--bg-modalidades);
+}
+#contenedor-agregar input:focus {
+    background-color: var(--color-secciones);
+    border-bottom: solid 2px var(--bg-modalidades);
+
+}
+#contenedor-agregar button {
+    padding: 10px 1rem 5px 1rem;
+    text-align: center;
+    border: none;
+} 
+#contenedor-agregar button:hover {
+    background-color: var(--bg-modalidades);
+    color: var(--bg-color-basico);
+}
+
+
+
+#contenedor-tabla {
+    background-color: var(--bg-color-basico);
+}
+#tabla {
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+}
+#tabla li {
+    display: flex;
+    flex-direction: column;
+
+    border: solid 2px #000;
+}
+#tabla div,h3 {
+    height: 1rem;
+    padding: 5px;
+    text-align: center;
+
+    border-bottom: solid 3px #000;
+}
+.formularios-opciones { 
+    display: none;  
+
+}
+
+.boton-opciones {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: solid 3px #000;
+    border-radius: 0;
+    color: var(--color-mensage-error);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-opciones__eliminal {
+    transition-duration: .500s;
+    transition-property: background,color,border;
+
+    border: none;
+    outline: none;
+    border-bottom: solid 2px var(--bg-fondo);
+
+    text-align: center;
+    background-color: var(--bg-modalidades);
+}
+.boton-opciones__eliminal:hover {
+    color: var(--bg-color-basico);
+    background-color: var(--bg-modalidades);
+}
+.boton-opciones__editar {
+    background-color: var(--bg-boton-editar);
+}
+.boton-opciones__editar:hover {
+    color: var(--bg-color-basico);
+    background-color: var(--bg-boton-editar);
+}
+.boton-opciones__vista {
+    background-color: var(--bg-boton-vista);
+}
+.boton-opciones__vista:hover {
+    color: var(--bg-color-basico);
+    background-color: var(--bg-boton-vista);
+}
+
+.contenedor-mensages {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100dvw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-fondo);
+
+    display: none;
+}
+.botones-mensages {
+    display: inline-block;
+    background-color: #aaa;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 7px;
+    box-shadow: 7px 7px 12px #000;
+
+}
+.botones-mensages:hover {    
+    box-shadow: inset -7px -7px 12px #000;
+    color: var(--bg-color-basico);
+}
+.boton-eliminal-si {
+    background-color: var(--bg-modalidades);
+
+}
+.boton-eliminal-no {
+    background-color: var(--bg-boton-vista);
+
+}
+.contenedor-botones-mensages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#mensage-eliminal {
+    width: 70%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+
+
+#mensge-celular {
+    position: absolute;
+    top: 0;
+    
+    width: 100dVw;
+    height: 100dvh;
+
+    background-color: var(--msg-celular);
+    
+    display: none;
+}
+#mensge-celular  h3 {
+    padding: 1rem 2rem;
+    margin: 1rem;
+}
+#mensge-celular p {
+    margin: 0 1rem;
+}
+
+
+
+
+
+@media (max-width: 750px) {
+    #tabla {
+        flex-direction: column;
+    }
+    #tabla li {
+        display: flex;
+        margin: 2rem 0;
+    }
+    #mensge-celular {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+}

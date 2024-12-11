@@ -1,0 +1,258 @@
+
+
+
+#contenedor-imagenes-deslizantes {
+    width: 100dvw;
+    height: 90dvh;
+    margin: auto;
+    overflow: hidden;
+
+    
+    object-fit:cover
+
+}
+#contenedor-imagenes-deslizantes ul {
+    display: flex;
+    width: 400%;
+
+    animation: desplazamiento 15s infinite linear;    
+}
+#contenedor-imagenes-deslizantes li {
+    list-style: none;
+    width: 100%;
+    
+}
+#contenedor-imagenes-deslizantes img {
+    width: 100%;
+}
+
+@keyframes desplazamiento {
+    0% { margin-left: 0%;}
+    20% { margin-left: 0%;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -300%;}
+    95% { margin-left: -300%;}
+
+}
+
+
+
+
+
+#contenedor-modalidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100dvw;
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+#contenedor-modalidades h2 {
+    flex-grow: 2;
+    text-align: center;
+
+    
+    color: var(--color-decorativo);
+    font-size: xx-large;
+}
+.modalidades {
+    position: relative;
+
+    flex-grow: 1;
+
+    width: 200px;
+    height: 200px;
+    margin: 1rem;
+
+    overflow: hidden;
+
+}
+.modalidades p {
+    
+    padding: 0 10px 10px 10px;
+}
+.modalidades h3 {
+    padding: 3px;
+    font-weight: 900;
+}
+.modalidades img {
+    width: 100%;
+    height: 100%;
+}
+.info-modalidades {
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    background-color: var(--bg-modalidades);
+    color: var(--bg-color-basico);
+
+    
+    transition-property: all;
+    transition-duration: 500ms;
+
+    opacity: 0;
+    visibility: hidden;
+}
+.modalidades:hover > .info-modalidades {
+    opacity: 1;
+    visibility: visible;
+}
+.modalidades,.info-modalidades {
+    border-radius: 50%;
+}
+
+
+
+
+#contenedor-carrusel {
+    width: 80dvw;
+    height: 500px;
+
+    margin: auto;
+    border: solid 5px #000;
+    overflow: hidden;
+}
+.elementos-carrusel {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+.elementos-carrusel img {
+    width: 100%;
+    height: 100%;
+}
+.elementos-carrusel a {
+    position: absolute;
+    top: 45%;
+    
+    font-size: xx-large;
+    padding: 5px 10px;
+
+    background-color: var(--bg-fondo);
+    color: var(--bg-color-basico);
+
+
+}
+.boton-atras {
+    left: 2%;
+}
+.boton-adelante {
+    right: 2%;
+}
+
+
+
+
+
+
+footer{
+    width: 100dvw;
+    height: 50dvh;
+    box-sizing: border-box;
+    padding: 3rem 0;
+
+    margin: auto;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(var(--bg-color-basico), var(--bg-modalidades));
+}
+#contenedor-pie {
+    background-color: var(--color-decorativo);
+    color: var(--bg-color-basico);
+
+    margin: 2rem;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#contenedor-pie div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#contenedor-pie h4 {
+    margin: 3px 0 10px 0;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+}
+#contenedor-pie a {
+    color: var(--color-apagado);
+    margin: 10px 20px;
+}
+#contenedor-pie a:hover {
+    color: var(--bg-color-basico);
+}
+
+
+
+
+@media (max-width: 750px) {
+    #contenedor-imagenes-deslizantes img {
+        height: 80dvh;
+    }
+
+
+    #contenedor-modalidades {
+        flex-direction: column;
+    }
+    #contenedor-modalidades h2 {
+        width: 100%;
+        padding: 10px;
+        background-color: var(--color-decorativo);
+        color: var(--bg-color-basico);
+        margin: 2rem 0;
+    }
+    .modalidades {
+        margin: 2rem 0;
+    }
+
+
+    #contenedor-carrusel {
+        width: 100dvw;
+        height: 100dvh;
+    }
+    .elementos-carrusel img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #contenedor-pie {
+        width: 100dvw;
+        margin: 0;
+
+        flex-direction: column;
+        justify-content: end;
+    }
+    #contenedor-pie div {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+}

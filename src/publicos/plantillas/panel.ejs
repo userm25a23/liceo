@@ -1,0 +1,116 @@
+<%- include('./partials/cabeza.ejs') %>
+
+<link rel="stylesheet" href="/css/panel.css">
+
+<main>
+    <div id="contenedor-titulo">
+        <h1> panel <%= seccion %></h1>
+    </div>
+
+    <section class="secciones" id="seccion-agregar">
+        <div id="contenedor-agregar">
+            <h2>agregar</h2>
+            <form action="/panel/agregar" method="post">
+                <input id="nombre" name="nombre" type="text" placeholder="nomrbe">
+                <input id="edad" name="edad" type="number" placeholder="edad">
+                <input class="oculto" name="seccion" type="text" value="<%= seccion %>">
+                <input class="oculto" name="codigo" type="number" value="<%= codigo %>">
+                <button>guardar</button>
+            </form>            
+        </div>
+    </section>
+
+    <section id="seccion-mensages">
+        <% for(let i=0;i<tabla.length;i++) { %>
+        
+        <div class="contenedor-mensages" id="contenedor-mensage-eliminal<%= i %>">
+            <div id="mensage-eliminal">
+                <h3>¿SEGURO DE QUE QUIERES ELIMINAL ESTA ALUMNO.?</h3>
+                <div class="contenedor-botones-mensages">
+                        <div class="botones-mensages boton-eliminal-si" id="boton-eliminal-si<%= i %>">si</div>
+                        <div class="botones-mensages boton-eliminal-no" id="boton-eliminal-no<%= i %>">no</div>
+                </div>
+            </div>
+        </div>
+            
+        <% } %>
+    </section>
+    <section class="secciones" id="seccion-tabla">
+        <div  id="contenedor-tabla">
+            <ul id="tabla">
+                            
+                <li>
+                    <h3>id</h3>
+                    <% for (let i=0; i<tabla.length; i++) { %>
+                        <div><%= i+1  %></div>
+                    <% } %>
+                </li>
+                
+                <li>
+                    <h3>nombre completo</h3>
+                    <% for (let i=0; i<tabla.length; i++) { %>
+                        <div><%= tabla[i].nombre_completo %></div>
+                    <% } %>
+                </li>
+                
+                <li>
+                    <h3>edad</h3>
+                    <% for (let i=0; i<tabla.length; i++) { %>
+                        <div><%= tabla[i].edad %></div>
+                    <% } %>
+                </li>
+                
+                <li>
+                    <h3>boton de</h3>
+                    <% for (let i=0; i<tabla.length; i++) { %>
+                        <form>
+                            <input class="oculto" type="text" id="numero-de-registro" value="<%= tabla.length %>">
+
+                            <input class="oculto" type="number" id="id-eliminal<%= i %>" value="<%= tabla[i].id_alumnos %>">
+                            <input class="oculto" type="text" id="seccion-eliminal<%= i %>" value="<%= seccion %>">
+                            <input class="oculto" type="number" id="codigo-eliminal<%= i %>" value="<%= codigo %>">
+                        </form>
+                        <button id="boton-eliminal<%= i %>" class="boton-opciones boton-opciones__eliminal">eliminal</button>
+                    <% } %>
+                </li>
+                
+                
+                <li>
+                    <h3>boton de</h3>
+                    <% for (let i=0; i<tabla.length; i++) { %>
+                        <form>
+                            <input class="oculto" type="number" id="id-editar<%= i %>" value="<%= tabla[i].id_alumnos %>">
+                            <input class="oculto" type="text" id="nombre-editar<%= i %>" value="<%= tabla[i].nombre_completo %>">
+                            <input class="oculto" type="number" id="edad-editar<%= i %>" value="<%= tabla[i].edad %>">
+                            <input class="oculto" type="text" id="seccion-editar<%= i %>" value="<%= seccion %>">
+                            <input class="oculto" type="number" id="codigo-editar<%= i %>" value="<%= codigo %>">
+                        </form>
+                        <button id="boton-editar<%= i %>" class="boton-opciones boton-opciones__editar">editar</button>
+                    <% } %>
+                </li>
+                
+                <li>
+                    <h3>boton de</h3>
+                    <% for (let i=0; i<tabla.length; i++) { %>
+                        <form id="form-vista" class="formularios-opciones" action="/panel/vista" method="post">
+                            <input type="number" id="id-vista<%= i %>" value="<%= tabla[i].id_alumnos %>">
+                            <input type="text" id="seccion-vista<%= i %>" value="<%= seccion %>">
+                            <input type="number" id="codigo-vista<%= i %>" value="<%= codigo %>">
+                        </form>
+                        <button id="boton-vista<%= i %>" class="boton-opciones boton-opciones__vista">vista</button>
+                    <% } %>
+                </li>
+                
+                
+        </div>
+    </section>
+
+    <div id="mensge-celular">
+        <h3>error</h3>
+        <p>
+            NO SE PUEDE ACCEDER A ESTE PANEL CON UN CELULAR. :(
+        </p>
+
+    </div>
+    <script src="/js/panelScript.js"></script>
+</main>

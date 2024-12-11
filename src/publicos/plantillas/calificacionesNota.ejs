@@ -1,0 +1,41 @@
+
+<%- include('./partials/cabeza.ejs') %>
+
+<link rel="stylesheet" href="/css/calificacionesNota.css">
+
+
+<div id="contenedor-titulo">
+    <h2>panel notas secciones <%= seccion %></h2>
+
+</div>
+
+
+<main>
+    <div id="contenedor-alumnos_nota">
+
+        
+        <% for(let i=0;i<notas[0].length;i++) { %>
+
+            <div class="alumnos_nota">
+
+                <h3>nombre: <%= notas[0][i].nombre_completo %> N: <%= notas[0][i].id_alumnos %></h3>
+                    
+                <% for(let j=0;j<notas.length;j++) { %>
+                    <div class="alumnos_nota--materias">
+                        
+                        <h4>materia: <%= notas[j][i].materia %></h4>
+                        
+                        <li>p1: <%= notas[j][i].p1 %> %</li>
+                        <li>p2: <%= notas[j][i].p2 %> %</li>
+                        <li>p3: <%= notas[j][i].p3 %> %</li>
+                        <li>p4: <%= notas[j][i].p4 %> %</li>
+                    </div>
+                    
+                <% } %>
+            </div>
+
+        <% } %>
+        
+
+    </div>
+</main>
